@@ -1,0 +1,27 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int arr[] =new int[n];
+        for(int i=0;i<n;i++){
+            arr[i]=sc.nextInt();
+        }
+        int div = sc.nextInt();
+        int count = 0;
+        int sum = 0;
+        System.out.print("The elements that are divisible by " + div + " is ");
+        for(int i=0;i<n;i++){
+            if(arr[i] %div == 0){
+            System.out.print(arr[i]+" ");
+            count ++;
+            sum += arr[i];
+            }
+        }
+        System.out.print("\nThe Count of the value that is divisible by " + div + " is "+count);
+        System.out.print("\nThe Sum of value that is divisible by " + div + " is "+sum);
+    }
+}
