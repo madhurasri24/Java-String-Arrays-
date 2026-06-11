@@ -1,0 +1,18 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        n = Math.abs(n);
+        int lastdigit = n % 10;
+        int firstdigit = n / 10;
+        while(firstdigit >= 10){
+            firstdigit = firstdigit / 10;
+        }
+        int number = lastdigit + firstdigit;
+        System.out.print(number);
+    }
+}
